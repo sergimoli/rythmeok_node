@@ -3,9 +3,12 @@ const Schema = mongoose.Schema;
 
 const artistsSchema = new Schema(
   {
-    name: { type: String, required: true },
+    id: { type: Number, required: true },
+    name: { type: String },
     image: { type: String },
-    styles: { type: Array },
+    description: { type: String },
+    crew: { type: Array },
+    genres: { type: Array },
   },
   {
     timestamps: true,

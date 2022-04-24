@@ -1,15 +1,19 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const stylesSchema = new Schema(
+const eventsSchema = new Schema(
   {
-    name: { type: String, required: true },
-    image: { type: String },
+    id: { type: Number, required: true },
+    date: { type: Date },
+    idartist: { type: Number },
+    idhall: { type: Number },
+    price: { type: Number },
+    assistants: { type: Number },
   },
   {
     timestamps: true,
   }
 );
 
-const styles = mongoose.model("events", stylesSchema);
-module.exports = styles;
+const events = mongoose.model("events", eventsSchema);
+module.exports = events;
