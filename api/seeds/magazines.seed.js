@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Magazines = require("../models/magazines.model");
 
-const wavesJSON = [
+const magazinesJSON = [
   {
     id: 1,
     name: "WIRE",

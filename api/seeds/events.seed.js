@@ -1,60 +1,74 @@
 const mongoose = require("mongoose");
 const Events = require("../models/events.model");
 
-const artistsJSON = [
+const eventsJSON = [
   {
-    date: "2022-04-04 00:00:00",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579310/RITHMEOK/artists/TAYLORSWIFT_ytf37d.jpg",
+    id: 1,
+    date: "2022-04-04 12:00:00",
+    idartist: 1,
+    idhall: 1,
+    price: 25,
+    assistants: 16,
   },
   {
-    name: "Justin Bibier",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579310/RITHMEOK/artists/JUSTINBIBIER_vheqht.jpg",
+    id: 2,
+    date: "2022-04-04 14:00:00",
+    idartist: 2,
+    idhall: 2,
+    price: 15,
+    assistants: 36,
   },
   {
-    name: "The weekend",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579310/RITHMEOK/artists/THEWEEKEND_kzaspj.jpg",
+    id: 3,
+    date: "2022-04-05 10:00:00",
+    idartist: 3,
+    idhall: 3,
+    price: 60,
+    assistants: 316,
   },
   {
-    name: "Rihanna",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579310/RITHMEOK/artists/RIHANNA_o5r2sb.jpg",
+    id: 4,
+    date: "2022-04-05 12:00:00",
+    idartist: 4,
+    idhall: 4,
+    price: 25,
+    assistants: 16,
   },
   {
-    name: "Bad Bunny",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/BADBUNNY_ivhpeg.jpg",
+    id: 5,
+    date: "2022-04-05 14:00:00",
+    idartist: 5,
+    idhall: 5,
+    price: 35,
+    assistants: 10,
   },
   {
-    name: "Eminem",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/eminem_ajek8e.jpg",
+    id: 6,
+    date: "2022-04-05 20:00:00",
+    idartist: 6,
+    idhall: 6,
+    price: 40,
+    assistants: 20,
   },
   {
-    name: "Drake",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/DRAKE_a27dkp.jpg",
+    id: 7,
+    date: "2022-04-06 14:00:00",
+    idartist: 7,
+    idhall: 7,
+    price: 15,
+    assistants: 150,
   },
   {
-    name: "Ed Sheeran",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/EDSHEERAN_w0eqxr.jpg",
-  },
-  {
-    name: "BTS",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/BTS_yiwr4i.jpg",
-  },
-  {
-    name: "Ariana Grande",
-    image:
-      "https://res.cloudinary.com/dahswyr0k/image/upload/v1650579309/RITHMEOK/artists/ARIANAGRANDE_bzgols.jpg",
+    id: 8,
+    date: "2022-04-06 21:00:00",
+    idartist: 8,
+    idhall: 8,
+    price: 20,
+    assistants: 10,
   },
 ];
 
-const eachOfevents = artistsJSON.map((event) => new Events(event));
+const eachOfevents = eventsJSON.map((event) => new Events(event));
 
 mongoose
   .connect(
