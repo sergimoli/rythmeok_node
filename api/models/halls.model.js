@@ -8,6 +8,8 @@ const hallsSchema = new Schema(
     image: { type: String },
     description: { type: String },
     address: { type: String },
+    city: { type: String },
+    cp: { type: String },
     telephone: { type: String },
     webpage: { type: String },
     latitude: { type: String },
