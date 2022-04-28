@@ -4,9 +4,17 @@ const Schema = mongoose.Schema;
 const eventsSchema = new Schema(
   {
     id: { type: Number, required: true },
-    date: { type: Date },
-    idartist: { type: Number },
-    idhall: { type: Number },
+    // date: { type: Date },
+    date: { type: String, required: true },
+    time: { type: String },
+    // idartist: { type: Number },
+    // idhall: { type: Number },
+    idartist: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "artists", trim: true },
+    ],
+    idhall: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "halls", trim: true },
+    ],
     price: { type: Number },
     assistants: { type: Number },
   },
